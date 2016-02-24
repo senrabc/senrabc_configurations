@@ -27,3 +27,10 @@ alias myip="curl http://ipecho.net/plain; echo"
 
 #no worky on mac
 #alias ps="ps auxf"
+
+#keep the bash history for a long time
+export HISTCONTROL=ignoredups
+export HISTSIZE=99999999
+export HISTFILESIZE=99999999
+
+fortune

@@ -34,7 +34,7 @@ alias bh="cat ~/.bash_history"
 alias hh="history"
 
 # this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
-alias ubrc="cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add bashrc && git commit -m "add to bashrc. this is auto commit" && git push"
+alias ubrc="cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add bashrc && git commit -m 'add to bashrc. this is auto commit' && git push"
 #no worky on mac
 #alias ps="ps auxf"
 

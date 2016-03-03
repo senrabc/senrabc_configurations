@@ -1,3 +1,4 @@
+
 source /usr/local/etc/bash_completion.d/password-store
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -30,6 +31,8 @@ alias gr="git remote -v"
 alias gbr="git branch -r"
 alias myip="curl http://ipecho.net/plain; echo"
 alias bh="cat ~/.bash_history"
+alias hh="history"
+alias ubrc="cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc"
 #no worky on mac
 #alias ps="ps auxf"
 

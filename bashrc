@@ -29,7 +29,7 @@ alias gs="git status"
 alias gr="git remote -v"
 alias gbr="git branch -r"
 alias myip="curl http://ipecho.net/plain; echo"
-
+alias bh="cat ~/.bash_history"
 #no worky on mac
 #alias ps="ps auxf"
 

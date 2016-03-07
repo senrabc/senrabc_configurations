@@ -32,11 +32,11 @@ alias gbr="git branch -r"
 alias myip="curl http://ipecho.net/plain; echo"
 alias bh="cat ~/.bash_history"
 alias hh="history"
+alias vgs="vagrant global-status"
 
 # this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
-alias ubrc="cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add bashrc && git commit -m 'add to bashrc. this is auto commit' && git push"
-#no worky on mac
-#alias ps="ps auxf"
+alias ubrc="cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. this is auto commit' && git push"
+
 
 #keep the bash history for a long time
 export HISTCONTROL=ignoredups

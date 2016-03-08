@@ -1,4 +1,7 @@
 
+# get your fonts for shell here
+# https://github.com/larsenwork/monoid
+
 source /usr/local/etc/bash_completion.d/password-store
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -33,7 +36,8 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias bh="cat ~/.bash_history"
 alias hh="history"
 alias vgs="vagrant global-status"
-
+alias ebr="nano ~/.bashrc"
+alias sbr="source ~/.bashrc"
 # this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
 alias ubrc="cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. this is auto commit' && git push"
 

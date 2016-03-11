@@ -21,6 +21,9 @@ brew cask install vagrant
 # I like running virtual machines more
 brew cask install virtualbox
 
+# setup your bash prompt to give you git info
+brew install bash-git-prompt
+
 # brew maint.
 # helps free up space and solves most errors
 

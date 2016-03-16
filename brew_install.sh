@@ -27,6 +27,9 @@ brew install bash-git-prompt
 # brew maint.
 # helps free up space and solves most errors
 
+# get pycharm community edition
+brew install Caskroom/versions/pycharm-ce
+
 brew update
 
 brew cask update

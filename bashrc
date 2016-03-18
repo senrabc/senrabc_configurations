@@ -23,7 +23,7 @@ export PYTHONPATH=/Users/cpb/code/vivo-pump
  fi
 
 
-#color LS output
+# color LS output
 
 export LS_OPTIONS='--color=auto'
 eval "`dircolors`"
@@ -33,21 +33,24 @@ alias ls='ls $LS_OPTIONS'
 # Aliases
 #########
 
+# put them in alphabetical order
+
 alias ahelp="cat ~/.bashrc | grep 'alias' "
-alias ll="ls -lhA"
+alias bh="cat ~/.bash_history"
+alias c="cd .."
+alias ebr="nano ~/.bashrc"
 alias gs="git status"
 alias gr="git remote -v"
 alias gbr="git branch -r"
-alias myip="curl http://ipecho.net/plain; echo"
-alias bh="cat ~/.bash_history"
 alias hh="history"
-alias vs="vagrant status"
-alias vup="vagrant up"
-alias vgs="vagrant global-status"
-alias ebr="nano ~/.bashrc"
+alias ll="ls -lhA"
+alias myip="curl http://ipecho.net/plain; echo"
 alias sbr="source ~/.bashrc"
 # this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
 alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. this is an alias doing an auto commit to keep locla and remote bashrc insync' && git push"
+alias vs="vagrant status"
+alias vup="vagrant up"
+alias vgs="vagrant global-status"
 
 
 #keep the bash history for a long time

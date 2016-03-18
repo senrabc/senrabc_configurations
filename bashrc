@@ -47,7 +47,7 @@ alias ll="ls -lhA"
 alias myip="curl http://ipecho.net/plain; echo"
 alias sbr="source ~/.bashrc"
 # this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
-alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. this is an alias doing an auto commit to keep locla and remote bashrc insync' && git push"
+alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. This is an alias doing an auto commit to keep local and remote bashrc insync' && git push"
 alias vs="vagrant status"
 alias vup="vagrant up"
 alias vgs="vagrant global-status"

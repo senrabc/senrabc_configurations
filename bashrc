@@ -35,42 +35,51 @@ alias ls='ls $LS_OPTIONS'
 
 # put them in alphabetical order
 
-# help me see what all the aliases were that I made
+#alias: help me see what all the aliases were that I made
 alias ahelp="cat ~/.bashrc | grep 'alias' "
 
 alias bh="cat ~/.bash_history"
 
+#alias: change directory up one
 alias c="cd .."
 
-# edit .bashrc
+#alias: edit .bashrc
 alias ebr="nano ~/.bashrc"
 
+#alias: Show me the staTUS!
 alias gs="git status"
 
-# show me all the remotes
+#alias: Show me all the remotes
 alias gr="git remote -v"
 
-# show me all the remote branches
+#alias: show me all the remote branches
 alias gbr="git branch -r"
 
-# fetch all the remote tags and then list them
+#alias: fetch all the remote tags and then list them
 alias gft="git fetch --tags && git tag"
 
+#alias: If we don't learn from history we are doomed to retype it! -senrabc
 alias hh="history"
 
+#alias: you can't hide from my, silly files
 alias ll="ls -lhA"
 
+#alias: love this one, show me what the interwebs think I am
 alias myip="curl http://ipecho.net/plain; echo"
 
+#alias: Load up the old basher
 alias sbr="source ~/.bashrc"
 
-# this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
+#alias: this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
 alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. This is an alias doing an auto commit to keep local and remote bashrc insync' && git push"
 
+#alias: whats up with my vagrant
 alias vs="vagrant status"
 
+#alias: again I hate to type
 alias vup="vagrant up"
 
+#alias: this one rocks, shows the state of all yoru vagrants. I'm not the only one to leave a vagrant on and forget.
 alias vgs="vagrant global-status"
 
 

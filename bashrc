@@ -35,45 +35,52 @@ alias ls='ls $LS_OPTIONS'
 
 # put them in alphabetical order
 
-#alias: help me see what all the aliases were that I made
+# help me see what all the aliases were that I made
 alias ahelp="cat ~/.bashrc | grep 'alias' "
 
 alias bh="cat ~/.bash_history"
 
-#alias: change directory up one
+# change directory up one
 alias c="cd .."
 
-#alias: edit .bashrc
+# edit .bashrc
 alias ebr="vim ~/.bashrc"
 
-#alias: Show me the staTUS!
+# edit .vimrc
+alias evr="vim ~/.vimrc"
+
+# Show me the staTUS!
 alias gs="git status"
 
-#alias: Show me all the remotes
+# Show me all the remotes
 alias gr="git remote -v"
 
-#alias: show me all the remote branches
+# show me all the remote branches
 alias gbr="git branch -r"
 
-#alias: fetch all the remote tags and then list them
+# fetch all the remote tags and then list them
 alias gft="git fetch --tags && git tag"
 
-#alias: If we don't learn from history we are doomed to retype it! -senrabc
+# If we don't learn from history we are doomed to retype it! -senrabc
 alias hh="history"
 
-#alias: you can't hide from my, silly files
+# you can't hide from my, silly files
 alias ll="ls -lhA"
 
-#alias: love this one, show me what the interwebs think I am
+# love this one, show me what the interwebs think I am
 alias myip="curl http://ipecho.net/plain; echo"
 
-#alias: Load up the old basher
+# Load up the old basher
 alias sbr="source ~/.bashrc"
 
-#alias: this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
-alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. This is an alias doing an auto commit to keep local and remote bashrc insync' && git push"
+# this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
+alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. This is an alias doing an auto commit to keep local and remote bashrc in sync' && git push"
 
-#alias: whats up with my vagrant
+# update vim rc and commit it.
+alias uvrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.vimrc ~/code/senrabc.github.com/senrabc_configurations/vimrc && git add ~/code/senrabc.github.com/senrabc_configurations/vimrc && git commit -m 'add to vimrc. This is an alias doing an auto commit to keep local and remote vimrc in sync' && git push"
+
+
+# whats up with my vagrant
 alias vs="vagrant status"
 
 #alias: again I hate to type

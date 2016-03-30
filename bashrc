@@ -44,7 +44,7 @@ alias bh="cat ~/.bash_history"
 alias c="cd .."
 
 #alias: edit .bashrc
-alias ebr="nano ~/.bashrc"
+alias ebr="vim ~/.bashrc"
 
 #alias: Show me the staTUS!
 alias gs="git status"

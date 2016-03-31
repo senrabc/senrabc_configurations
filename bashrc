@@ -58,6 +58,10 @@ alias gr="git remote -v"
 # show me all the remote branches
 alias gbr="git branch -r"
 
+# git check, check all repos for changes
+
+alias gc="cd ~/code && ./git-check"
+
 # fetch all the remote tags and then list them
 alias gft="git fetch --tags && git tag"
 

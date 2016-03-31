@@ -60,7 +60,7 @@ alias gbr="git branch -r"
 
 # git check, check all repos for changes
 
-alias gc="cd ~/code && ./git-check"
+alias gc="cd ~/code && ./git-check.sh"
 
 # fetch all the remote tags and then list them
 alias gft="git fetch --tags && git tag"

@@ -68,6 +68,8 @@ alias gft="git fetch --tags && git tag"
 # If we don't learn from history we are doomed to retype it! -senrabc
 alias hh="history"
 
+#get help on the virutal environment shortcuts
+alias hvenv="cat /usr/local/bin/virtualenvwrapper.sh | grep function"
 # you can't hide from my, silly files
 alias ll="ls -lhA"
 

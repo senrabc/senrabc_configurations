@@ -30,6 +30,9 @@ brew install bash-git-prompt
 # get pycharm community edition
 brew install Caskroom/versions/pycharm-ce
 
+# get mysqlworkbench
+brew cask install mysqlworkbench
+
 brew update
 
 brew cask update

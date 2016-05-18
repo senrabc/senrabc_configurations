@@ -49,6 +49,9 @@ alias ebr="vim ~/.bashrc"
 # edit .vimrc
 alias evr="vim ~/.vimrc"
 
+#show me all my git alias ( usage git <alias> )
+alias ghelp="git la"
+
 # Show me the staTUS!
 alias gs="git status"
 

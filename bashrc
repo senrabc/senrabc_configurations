@@ -17,11 +17,17 @@ export PYTHONPATH=/Users/cpb/code/vivo-pump
 #export PS1="(\[\033[0;36m\]\@\[\033[0;37m\])(\[\033[0;35m\]\u@\[\033[0;37m]\[\033[0;37m\]):\[\033[0;31m\]\w\$ \[\e[32m\]\u\[\e[m\]"
 #export PS1="(${CYAN}\@${NO_COLOR})(${PURPLE}\u${NO_COLOR}@${GREEN}\h${NO_COLOR}):${YELLOW}\W${NO_COLOR}"
 #export PS1="\[\033[0;32m\]✔ \[\033[0;33m\]\w\[\033[0;0m\] \n\[\033[0;37m\]$(date +%H:%M)\[\033[0;0m\] $"
- if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
-    GIT_PROMPT_THEME=Default
-    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
- fi
+ 
+ #if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+ #   GIT_PROMPT_THEME=Default
+ #   source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+ #fi
 
+# fix for error from https://github.com/magicmonty/bash-git-prompt/issues/212
+if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+    export __GIT_PROMPT_DIR="$(brew --prefix bash-git-prompt)/share/"
+    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+fi
 
 # color LS output
 
@@ -67,6 +73,10 @@ alias gc="cd ~/code && ./git-check.sh"
 
 # fetch all the remote tags and then list them
 alias gft="git fetch --tags && git tag"
+
+#colorize grep
+
+alias grep='grep --color'
 
 # If we don't learn from history we are doomed to retype it! -senrabc
 alias hh="history"

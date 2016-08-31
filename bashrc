@@ -74,6 +74,10 @@ alias gc="cd ~/code && ./git-check.sh"
 # fetch all the remote tags and then list them
 alias gft="git fetch --tags && git tag"
 
+#show the pretty git log with grpah lines for commits
+alias gpl="git log --pretty=oneline --graph --decorate --all"
+
+
 #colorize grep
 
 alias grep='grep --color'

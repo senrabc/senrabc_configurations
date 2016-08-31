@@ -75,7 +75,7 @@ alias gc="cd ~/code && ./git-check.sh"
 alias gft="git fetch --tags && git tag"
 
 #show the pretty git log with grpah lines for commits
-alias gpl="git log --pretty=oneline --graph --decorate --all"
+alias gpl="git log --graph --abbrev-commit --decorate --date=relative --all"
 
 
 #colorize grep

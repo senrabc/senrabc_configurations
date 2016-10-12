@@ -31,7 +31,10 @@ brew install bash-git-prompt
 brew install Caskroom/versions/pycharm-ce
 
 # get mysqlworkbench
-brew cask install mysqlworkbench
+#brew cask install mysqlworkbench
+
+brew install mysql --client-only --universal
+
 
 brew update
 

@@ -8,6 +8,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source /usr/local/etc/bash_completion.d/password-store
 #alias ls='ls -h --color=auto'
 
+export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
 
 RESET="\[$(tput sgr0)\]"
 export PYTHONPATH=/Users/cpb/code/vivo-pump
@@ -66,6 +67,8 @@ alias gr="git remote -v"
 
 # show me all the remote branches
 alias gbr="git branch -r"
+
+alias gb="git branch -v"
 
 # git check, check all repos for changes
 

@@ -32,9 +32,14 @@ fi
 
 # color LS output
 
-export LS_OPTIONS='--color=auto'
-eval "`dircolors`"
-alias ls='ls $LS_OPTIONS'
+#export LS_OPTIONS='--color=auto'
+#eval "`dircolors`"
+#alias ls='ls $LS_OPTIONS'
+
+#added for wacky options for osx, this will now show colors
+
+alias ls='ls -G'
+
 
 #########
 # Aliases

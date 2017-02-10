@@ -8,6 +8,13 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source /usr/local/etc/bash_completion.d/password-store
 #alias ls='ls -h --color=auto'
 
+
+#put gnu coreutils in my path
+
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+
 export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
 
 RESET="\[$(tput sgr0)\]"
@@ -32,13 +39,13 @@ fi
 
 # color LS output
 
-#export LS_OPTIONS='--color=auto'
-#eval "`dircolors`"
-#alias ls='ls $LS_OPTIONS'
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
 
 #added for wacky options for osx, this will now show colors
 
-alias ls='ls -G'
+#alias ls='ls -G'
 
 
 #########

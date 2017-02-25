@@ -33,6 +33,9 @@ brew install Caskroom/versions/pycharm-ce
 # get mysqlworkbench
 brew cask install mysqlworkbench
 
+#gnu core utils
+brew install coreutils
+
 brew update
 
 brew cask update

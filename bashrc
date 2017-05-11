@@ -111,6 +111,10 @@ alias myip="curl http://ipecho.net/plain; echo"
 # Load up the old basher
 alias sbr="source ~/.bashrc"
 
+# my ssh aliases
+alias skeep="ssh senrabc@keepatodo.com"
+
+
 # this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
 alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. This is an alias doing an auto commit to keep local and remote bashrc in sync' && git push"
 

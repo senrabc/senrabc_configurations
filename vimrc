@@ -1,3 +1,7 @@
+" Allow mac to use backspace to delete text that WAS NOT created during current
+"   session
+set backspace=2
+
 " turn on syntax highlighting
 syntax enable
 

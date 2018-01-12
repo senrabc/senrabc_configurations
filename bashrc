@@ -2,10 +2,10 @@
 # get your fonts for shell here
 # https://github.com/larsenwork/monoid
 
-source /usr/local/etc/bash_completion.d/password-store
+#source /usr/local/etc/bash_completion.d/password-store
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source /usr/local/etc/bash_completion.d/password-store
+#source /usr/local/etc/bash_completion.d/password-store
 #alias ls='ls -h --color=auto'
 
 

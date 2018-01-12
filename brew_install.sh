@@ -12,6 +12,34 @@ xcode-select --install
 #brew install wget
 brew install wget
 
+# ref: thx to : https://danielmiessler.com/study/tmux/
+# https://danielmiessler.com/blog/first-10-things-new-mac/
+# get gnu utils instead of OSX ones
+
+#  run tap to check for dulicates
+brew tap homebrew/dupes
+
+brew install findutils --default-names
+brew install gnu-sed --default-names
+brew install gnu-tar --default-names
+brew install gnu-which --default-names
+brew install gnutls --default-names
+brew install grep --default-names
+brew install coreutils
+brew install binutils
+brew install diffutils
+brew install gzip
+brew install watch
+brew install tmux 
+brew install wget
+brew install nmap
+brew install gpg
+brew install htop
+
+
+
+
+
 #atom text editor rocks 
 brew cask install atom
 

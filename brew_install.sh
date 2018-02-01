@@ -12,7 +12,10 @@ xcode-select --install
 #brew install wget
 brew install wget
 
-# ref: thx to : https://danielmiessler.com/study/tmux/
+# get python
+brew install python
+
+i# ref: thx to : https://danielmiessler.com/study/tmux/
 # https://danielmiessler.com/blog/first-10-things-new-mac/
 # get gnu utils instead of OSX ones
 
@@ -36,7 +39,7 @@ brew install nmap
 brew install gpg
 brew install htop
 
-
+brew install git-flow
 
 
 

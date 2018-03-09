@@ -1,96 +1,48 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
 
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+# get your fonts for shell here
+# https://github.com/larsenwork/monoid
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
+#source /usr/local/etc/bash_completion.d/password-store
 
-# append to the history file, don't overwrite it
-shopt -s histappend
+#source /usr/local/etc/bash_completion.d/password-store
+#alias ls='ls -h --color=auto'
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+#put gnu coreutils in my path
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+#export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+RESET="\[$(tput sgr0)\]"
+#export PYTHONPATH=/Users/cpb/code/vivo-pump
 
-# make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+#\w show full path \W show just directory
+#export PS1="(\[\033[0;36m\]\@\[\033[0;37m\])(\[\033[0;35m\]\u@\[\033[0;37m]\[\033[0;37m\]):\[\e[30;0m\]\W\\ ${RESET} "
+#export PS1="(\[\033[0;36m\]\@\[\033[0;37m\])(\[\033[0;35m\]\u@\[\033[0;37m]\[\033[0;37m\]):\[\033[0;31m\]\w\$ \[\e[32m\]\u\[\e[m\]"
+#export PS1="(${CYAN}\@${NO_COLOR})(${PURPLE}\u${NO_COLOR}@${GREEN}\h${NO_COLOR}):${YELLOW}\W${NO_COLOR}"
+#export PS1="\[\033[0;32m\]✔ \[\033[0;33m\]\w\[\033[0;0m\] \n\[\033[0;37m\]$(date +%H:%M)\[\033[0;0m\] $"
+ 
+ #if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+ #   GIT_PROMPT_THEME=Default
+ #   source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+ #fi
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
+# fix for error from https://github.com/magicmonty/bash-git-prompt/issues/212
+#if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+#    export __GIT_PROMPT_DIR="$(brew --prefix bash-git-prompt)/share/"
+#    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+#fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
+# color LS output
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-force_color_prompt=yes
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
 
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
+#added for wacky options for osx, this will now show colors
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+#alias ls='ls -G'
 
 #########
 # Aliases
@@ -100,17 +52,11 @@ fi
 
 # help me see what all the aliases were that I made
 alias ahelp="cat ~/.bashrc | grep 'alias' "
-
+alias rapp="open /Applications/R.app"
 alias bh="cat ~/.bash_history"
-
+alias pip="pip2"
 # change directory up one
 alias c="cd .."
-
-#edit journal
-
-alias ejr="vim ~/code/senrabc.gitlab.com/journal/journal.txt"
-#update journal entry / sync
-alias ujr=" cd /home/senrabc/code/senrabc.gitlab.com/journal && git add ~/code/senrabc.gitlab.com/journal/journal.txt && git commit -m 'add to journal. This is an alias doing an auto commit to keep local and remote journal.txt in sync' && git push"
 
 # edit .bashrc
 alias ebr="vim ~/.bashrc"
@@ -142,7 +88,6 @@ alias gft="git fetch --tags && git tag"
 #show the pretty git log with grpah lines for commits
 alias gpl="git log --graph --abbrev-commit --decorate --date=relative --all"
 
-
 #colorize grep
 
 alias grep='grep --color'
@@ -158,15 +103,20 @@ alias ll="ls -lhA"
 # love this one, show me what the interwebs think I am
 alias myip="curl http://ipecho.net/plain; echo"
 
+#ssh to minerva
+alias smin="ssh senrabc@minerva.myftp.org"
+
 # Load up the old basher
 alias sbr="source ~/.bashrc"
 
+# my ssh aliases
+alias skeep="ssh senrabc@keepatodo.com"
+
 # this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
-alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && git pull && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. This is an alias doing an auto commit to keep local and remote bashrc in sync' && git push"
+alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. This is an alias doing an auto commit to keep local and remote bashrc in sync' && git push"
 
 # update vim rc and commit it.
 alias uvrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.vimrc ~/code/senrabc.github.com/senrabc_configurations/vimrc && git add ~/code/senrabc.github.com/senrabc_configurations/vimrc && git commit -m 'add to vimrc. This is an alias doing an auto commit to keep local and remote vimrc in sync' && git push"
-
 
 # whats up with my vagrant
 alias vs="vagrant status"
@@ -177,22 +127,13 @@ alias vup="vagrant up"
 #alias: this one rocks, shows the state of all yoru vagrants. I'm not the only one to leave a vagrant on and forget.
 alias vgs="vagrant global-status"
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+#keep the bash history for a long time
+export HISTCONTROL=ignoredups
+export HISTSIZE=99999999
+export HISTFILESIZE=99999999
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+fortune
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+source ~/.profile

@@ -100,7 +100,7 @@ fi
 
 # help me see what all the aliases were that I made
 alias ahelp="cat ~/.bashrc | grep 'alias' "
-
+alias rapp="open /Applications/R.app"
 alias bh="cat ~/.bash_history"
 
 # change directory up one

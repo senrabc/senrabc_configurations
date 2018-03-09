@@ -100,7 +100,7 @@ fi
 
 # help me see what all the aliases were that I made
 alias ahelp="cat ~/.bashrc | grep 'alias' "
-alias rapp="open /Applications/R.app"
+
 alias bh="cat ~/.bash_history"
 
 # change directory up one
@@ -162,7 +162,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias sbr="source ~/.bashrc"
 
 # this may be much, but I got tired of syncing and commiting my basrc files local and on gh by hand
-alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. This is an alias doing an auto commit to keep local and remote bashrc in sync' && git push"
+alias ubrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && git pull && cp ~/.bashrc ~/code/senrabc.github.com/senrabc_configurations/bashrc && source ~/.bashrc && git add ~/code/senrabc.github.com/senrabc_configurations/bashrc && git commit -m 'add to bashrc. This is an alias doing an auto commit to keep local and remote bashrc in sync' && git push"
 
 # update vim rc and commit it.
 alias uvrc="cd ~/code/senrabc.github.com/senrabc_configurations/ && cp ~/.vimrc ~/code/senrabc.github.com/senrabc_configurations/vimrc && git add ~/code/senrabc.github.com/senrabc_configurations/vimrc && git commit -m 'add to vimrc. This is an alias doing an auto commit to keep local and remote vimrc in sync' && git push"

@@ -17,6 +17,8 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 RESET="\[$(tput sgr0)\]"
 #export PYTHONPATH=/Users/cpb/code/vivo-pump
 
+#added this export to pake pipsi python tool work
+export PATH=/Users/cpb/.local/bin:$PATH
 #\w show full path \W show just directory
 #export PS1="(\[\033[0;36m\]\@\[\033[0;37m\])(\[\033[0;35m\]\u@\[\033[0;37m]\[\033[0;37m\]):\[\e[30;0m\]\W\\ ${RESET} "
 #export PS1="(\[\033[0;36m\]\@\[\033[0;37m\])(\[\033[0;35m\]\u@\[\033[0;37m]\[\033[0;37m\]):\[\033[0;31m\]\w\$ \[\e[32m\]\u\[\e[m\]"

@@ -59,7 +59,10 @@ brew install bash-git-prompt
 # helps free up space and solves most errors
 
 # get pycharm community edition
-brew install Caskroom/versions/pycharm-ce
+#brew install Caskroom/versions/pycharm-ce
+
+# get open refine
+brew cask install openrefine
 
 # get mysqlworkbench
 #brew cask install mysqlworkbench

@@ -111,6 +111,9 @@ alias myip="curl http://ipecho.net/plain; echo"
 #ssh to minerva
 alias smin="ssh senrabc@minerva.myftp.org"
 
+#update journal
+alias ujr="git add journal.txt && git commit -m 'alias update' && git push"
+
 # Load up the old basher
 alias sbr="source ~/.bashrc"
 

@@ -1,5 +1,15 @@
 # stuff to install with brew to setup your mac
 
+# for R and R studio
+brew install caskroom/cask/brew-cask
+brew cask install xquartz
+brew tap homebrew/science
+brew install --with-x11 r
+brew install --with-x11 homebrew/science/r
+brew cask install --appdir=/Applications rstudio
+
+
+
 #install xcode from the app store first (required)
 
 #install xcode commandline tools

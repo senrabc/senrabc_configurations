@@ -109,7 +109,7 @@ alias ll="ls -lhA"
 alias myip="curl http://ipecho.net/plain; echo"
 
 #ssh to minerva
-alias smin="ssh senrabc@minerva.myftp.org"
+alias smin="ssh senrabc@minerva-pi.hopto.org"
 
 #update journal
 alias ujr="git add journal.txt && git commit -m 'alias update' && git push"
